@@ -16,4 +16,5 @@ jobs:
         with:
           template: infra/nginx.conf.j2
           output_file: infra/nginx.conf
-      - run: npm ci
+          
+      - run: date
