@@ -2,9 +2,8 @@ name: main xml read
 
 on:
   push:
-    branches: [ master ]
-
-
+    branches: main
+    
 jobs:
 
   extract_key_value:
