@@ -5,7 +5,26 @@ on:
     branches: main
     
 jobs:
+  
+  
+  explicit_checkout_remote_repo:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v2
 
+      - name: Checkout remote repository
+        uses: actions/checkout@v2
+        with:
+          repository: knowyrtech/betech  # Replace with the owner and repository name
+          ref: feature365  # Replace with the branch or commit SHA you want to checkout
+          path: "${{ github.workspace }}"  # Folder name for the remote repository
+
+      - name: List files in the remote repository
+        run: dir "${{ github.workspace }}"  # Example command to list files in the remote repository
+    
+    
   inside_actionyml:
 #    runs-on: windows-latest
     
