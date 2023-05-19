@@ -1,0 +1,24 @@
+name: main xml read
+
+on:
+  push:
+    branches: main
+    
+jobs:
+
+  extract_key_value:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Extract XML Key-Value
+        id: extract-xml-value
+        uses: knowyrtech/betech/getxmldata.yml@feature365
+        with:
+          xmlPath: ${{ env.XML_PATH }}
+          key: ${{ env.KEY_NAME }}
+
+      - name: Show Extracted Key-Value
+        run: |
+          echo "Extracted Key-Value: ${{ steps.extract-xml-value.outputs.value }}"
