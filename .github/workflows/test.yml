@@ -1,4 +1,4 @@
-name: main xml read
+name: TEST main xml read
 
 on:
   push:
