@@ -5,8 +5,7 @@ on:
     branches: main
     
 jobs:
-  
-  
+    
   explicit_checkout_remote_repo:
     runs-on: windows-latest
     
@@ -17,7 +16,6 @@ jobs:
       - name: List files in the remote repository
         run: |
           dir "${{ github.workspace }}"
-    
     
   inside_actionyml:
     uses: "knowyrtech/betech/.github/workflows/extractxmldata.yml@feature365"
