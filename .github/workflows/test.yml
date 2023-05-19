@@ -12,10 +12,10 @@ jobs:
     
     steps:
       - name: Checkout current repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Checkout remote repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: knowyrtech/betech  # Replace with the owner and repository name
           ref: feature365  # Replace with the branch or commit SHA you want to checkout
