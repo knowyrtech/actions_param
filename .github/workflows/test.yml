@@ -14,7 +14,7 @@ jobs:
 
       - name: Extract XML Key-Value
         id: extract-xml-value
-        uses: knowyrtech/betech/getxmldata.yml@feature365
+        uses: knowyrtech/betech/.github/workflows/extractxmldata.yml@feature365
         with:
           xmlPath: ${{ env.XML_PATH }}
           key: ${{ env.KEY_NAME }}
