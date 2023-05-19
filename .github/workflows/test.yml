@@ -7,18 +7,10 @@ on:
 jobs:
 
   inside_actionyml:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#    runs-on: windows-latest
+    
+    uses: knowyrtech/betech/.github/workflows/extractxmldata.yml@feature365
+    with:
+      xmlPath: ${{ env.XML_PATH }}
+      key: ${{ env.KEY_NAME }}
 
-      - name: Extract XML Key-Value
-        id: extract-xml-value
-        uses: knowyrtech/betech/.github/workflows/extractxmldata.yml@feature365
-        with:
-          xmlPath: ${{ env.XML_PATH }}
-          key: ${{ env.KEY_NAME }}
-
-      - name: Show Extracted Key-Value
-        run: |
-          echo "Extracted Key-Value: ${{ steps.extract-xml-value.outputs.value }}"
