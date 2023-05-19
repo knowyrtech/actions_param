@@ -19,7 +19,7 @@ jobs:
         with:
           repository: knowyrtech/betech  # Replace with the owner and repository name
           ref: feature365  # Replace with the branch or commit SHA you want to checkout
-          path: "${{ github.workspace }}"  # Folder name for the remote repository
+#          path: "${{ github.workspace }}"  # Folder name for the remote repository
 
       - name: List files in the remote repository
         run: dir "${{ github.workspace }}"  # Example command to list files in the remote repository
