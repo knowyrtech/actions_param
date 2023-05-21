@@ -12,5 +12,18 @@ jobs:
     
       - run: |
           whoami
+          
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run PowerShell script
+        id: run-script
+        run: |
+          & "C:\Logs\getkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name"
+
+      - name: Use script output
+        run: |
+          echo "Application Name: ${{ steps.run-script.outputs.github_out }}"
+          
       
       
