@@ -5,7 +5,7 @@ on:
     branches: main
 
 jobs:
-  test_pull_request:
+  test_pul_request:
     runs-on: moh_win
     
     steps:
