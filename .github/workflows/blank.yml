@@ -19,7 +19,7 @@ jobs:
       - name: Run  PowerShell script
         id: run-script
         run: |
-          & "C:\Logs\getkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name"
+          & "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name"
 
       - name: Use script output
         run: |
