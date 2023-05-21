@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Run PowerShell script
+      - name: Run  PowerShell script
         id: run-script
         run: |
           & "C:\Logs\getkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name"
