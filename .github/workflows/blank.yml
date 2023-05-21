@@ -1,4 +1,4 @@
-name: Node Continuous Integration
+name: xml-reader
 
 on:
   push:
@@ -7,19 +7,11 @@ on:
 
 jobs:
   test_pull_request:
-    runs-on: windows-latest
+    runs-on: moh_win
     
     steps:
     
       - run: |
-          "& cmd /c C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe -verb:sync -source:runcommand -dest:runcommand=\"cd C:\\inetpub\\wwwroot\\assoc.qa; \"C:\\Program Files\\nodejs\\pm2.cmd\" restart QuotingSignup-qa\",waitinterval=200000,wmsvc='https://remotehost:8172/msdeploy.axd?site=BackupSite',AuthType=Basic,userName=svc-BuildDeployDev,password='***' -allowUntrusted -verbose'"
-          
-      - name: Setup nginx
-        uses: cuchi/jinja2-action@v1.2.0
-        with:
-          template: infra/nginx.conf.j2
-          output_file: infra/nginx.conf
-          
-      - run: date
+          whoami
       
       
