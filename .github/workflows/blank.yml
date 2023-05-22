@@ -24,13 +24,14 @@ jobs:
       - name: Assign to variable
         id: run-scriptx
         run: |
-          $returnvalue=& "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name" 
-          "$returnvalue" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          $returnvalue=& "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name"
+          echo "$returnvalue" >> $env:GITHUB_OUTPUT
+          #"$returnvalue" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
          
       - name: Use script output
         run: |
-          echo "Application  Name: ${{ steps.run-scriptx.outputs.app_name }}"
+          echo "Application  Name: '${{ steps.run-scriptx.outputs.app_name }}'"
           
       
       
