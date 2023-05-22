@@ -25,8 +25,8 @@ jobs:
         id: run-scriptx
         run: |
           $returnvalue=& "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name" 
-          echo "$returnvalue" >> $GITHUB_OUTPUT
-
+          echo "$returnvalue" >> $env:GITHUB_OUTPUT
+         
       - name: Use script output
         run: |
           echo "Application Name: ${{ steps.run-scriptx.outputs.app_name }}"
