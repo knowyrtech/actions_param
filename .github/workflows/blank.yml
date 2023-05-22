@@ -25,8 +25,9 @@ jobs:
         id: run-scriptx
         run: |
           $returnvalue=& "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name" 
-          echo "$returnvalue" >> $env:GITHUB_OUTPUT
-        shell: pwsh 
+          @chcp 65001>nul
+          echo $returnvalue >> %GITHUB_OUTPUT%
+        shell: cmd
          
       - name: Use script output
         run: |
