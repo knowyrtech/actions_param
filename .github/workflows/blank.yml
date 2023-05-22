@@ -26,9 +26,7 @@ jobs:
         run: |
           $returnvalue=& "C:\Logs\getallkey.ps1" -xmlPath "C:\Logs\web.setParameters.xml" -keyName "app_name" 
           "$returnvalue" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
-          #@chcp 65001>nul
-          #echo $returnvalue >> %GITHUB_OUTPUT%
-        #shell: cmd
+
          
       - name: Use script output
         run: |
