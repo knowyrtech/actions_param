@@ -32,7 +32,7 @@ jobs:
          
       - name: Use script output
         run: |
-          echo "Application Name: ${{ steps.run-scriptx.outputs.app_name }}"
+          echo "Application  Name: ${{ steps.run-scriptx.outputs.app_name }}"
           
       
       
