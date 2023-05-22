@@ -15,6 +15,15 @@ jobs:
           
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: Sample append to OUT
+        id: sample
+        run: |
+          echo "app_name_sample=worksss" >> $env:GITHUB_OUTPUT
+          
+      - name: Use sample script output
+        run: |
+          echo "Sample Application_Name: ${{ steps.sample.outputs.app_name_sample }}"          
 
       - name: Run  PowerShell script
         id: run-script
