@@ -23,7 +23,7 @@ jobs:
 
       - name: Use script output
         run: |
-          echo "Application Name: ${{ steps.run-script.outputs.github_out }}"
+          echo "Application Name: ${{ steps.run-script.outputs.keyout }}"
           
       
       
