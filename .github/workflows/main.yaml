@@ -15,9 +15,9 @@ jobs:
       - name: Extract XML Key-Value
         id: extract-xml-value
         uses: ./betech/scripts/xml-functions.ps1@feature365
-        with:
-          xmlPath: ${{ env.XML_PATH }}
-          key: ${{ env.KEY_NAME }}
+#        with:
+#          xmlPath: ${{ env.XML_PATH }}
+#          key: ${{ env.KEY_NAME }}
 
       - name: Show Extracted Key-Value
         run: |
