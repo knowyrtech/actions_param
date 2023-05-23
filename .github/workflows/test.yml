@@ -19,7 +19,7 @@ jobs:
     
   inside_actionyml:
     uses: "knowyrtech/betech/.github/workflows/extractxmldata.yml@feature365"
-#    with:
-#      xml_Path: 'D:\myxl\setparam.xml'
-#      key_name: 'app_name'
+    with:
+      xml_Path: 'D:\myxl\setparam.xml'
+      key_name: 'app_name'
 
