@@ -7,7 +7,7 @@ on:
 jobs:
 
   extract_key_value:
-    runs-on: windows-latest
+    runs-on: 'moh_win'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
