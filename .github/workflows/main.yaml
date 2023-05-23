@@ -21,4 +21,4 @@ jobs:
 
       - name: Show Extracted Key-Value
         run: |
-          echo "Extracted Key-Value: ${{ steps.extract-xml-value.outputs.value }}"
+          echo "Extracted uu Key-Value: ${{ steps.extract-xml-value.outputs.value }}"
