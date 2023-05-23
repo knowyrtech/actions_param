@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        
+      - uses: actions/checkout@v3
+        with:
+          repository: knowyrtech/betech
+          ref: feature365
+          path: "${{ github.workspace }}/betech"        
 
       - name: Extract XML Key-Value
         id: extract-xml-value
